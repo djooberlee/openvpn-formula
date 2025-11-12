@@ -346,6 +346,10 @@ sndbuf {{ config.sndbuf }}
 rcvbuf {{ config.rcvbuf }}
 {% endif %}
 
+{%- if config.txqueuelen is defined %}
+txqueuelen {{ config.txqueuelen }}
+{% endif %}
+
 {%  if config.get('float', False) -%}
 float
 {%- endif %}
